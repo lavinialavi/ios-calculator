@@ -44,30 +44,70 @@
 //     document.getElementById('display').innerText = result;
 
 //     console.log(arr.toString().replace(/,/g, ''));
-
-
-
 // }
 
 var inputLabel = document.getElementById('display');
 
+const historyOfPressedButtons= [];
+
 function pushBtn(obj) {
 
-    var pushed = obj.innerHTML;
+    var pushed = obj.id;
 
-    if (pushed == '=') {
-        // Calculate
-        inputLabel.innerHTML = eval(inputLabel.innerHTML);
+    
+    historyOfPressedButtons.push(obj.id);
+    console.log(historyOfPressedButtons);
+     
+   if(pushed == '=') {
 
-    } else if (pushed == 'AC') {
-        // All Clear
-        inputLabel.innerHTML = '0';
-    } else {
-        if (inputLabel.innerHTML == '0') {
-            inputLabel.innerHTML = pushed;
+   
 
-        } else {
-            inputLabel.innerHTML += pushed;
-        }
-    }
+let result =0;
+
+//daca avem mai multe numere 888 trebuie sa se faca concatenarea lui 
+
+// daca avem mai multe semne */ trebuie sa se ia ultimul in considerare
+
+// 
+
+   }
+
+
+
+
+//     if (pushed == '=') {
+//         // Calculate
+//         inputLabel.innerHTML = eval(inputLabel.innerHTML);
+
+
+//     } else if (pushed == 'AC') {
+//         // All Clear
+//         inputLabel.innerHTML = '0';
+//     } else {
+//         if (inputLabel.innerHTML == '0') {
+//             inputLabel.innerHTML = pushed;
+
+//         } else {
+//             inputLabel.innerHTML += pushed;
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
